@@ -1,13 +1,546 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="utf-8">
+
+    <title>Atoms & Bits</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="##">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Barlow|Montserrat:300,400&display=swap');
+
+    html {
+
+        overflow: scroll;
+    }
+
+    body {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    .header h1 {
+        color: white;
+    }
+
+    .header {
+        background-image: url("prism.svg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        padding: 3vw;
+        text-align: center;
+        /* margin-top:0; */
+    }
+
+    .header hr {
+        border-color: white;
+        border-width: 1px;
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+    /** responsive columns*/
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+
+
+
+    /*fitting different screens*/
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+        /* For tablets: */
+        .col-s-1 {
+            width: 8.33%;
+        }
+
+        .col-s-2 {
+            width: 16.66%;
+        }
+
+        .col-s-3 {
+            width: 25%;
+        }
+
+        .col-s-4 {
+            width: 33.33%;
+        }
+
+        .col-s-5 {
+            width: 41.66%;
+        }
+
+        .col-s-6 {
+            width: 50%;
+        }
+
+        .col-s-7 {
+            width: 58.33%;
+        }
+
+        .col-s-8 {
+            width: 66.66%;
+        }
+
+        .col-s-9 {
+            width: 75%;
+        }
+
+        .col-s-10 {
+            width: 83.33%;
+        }
+
+        .col-s-11 {
+            width: 91.66%;
+        }
+
+        .col-s-12 {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        /* For desktop: */
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    }
+
+    /*end*/
+    .header .button {
+        font-family: 'Montserrat', sans-serif;
+
+        background: transparent;
+        border: 2px solid #eb6734;
+        border-radius: 3vw;
+        color: #eb6734;
+        font-size: 1.5vw;
+        padding: 1vw;
+        margin: 2vw;
+
+
+    }
+
+    .header .button:hover {
+        background-color: #eb6734;
+        /* Green */
+        color: white;
+    }
+
+    .header h2 {
+        color: white;
+        font-size: 6vw;
+
+    }
+
+    .header h3 {
+        color: white;
+        font-size: 2vw;
+
+    }
+
+    .row {
+        padding: 1vw;
+    }
+
+    .card2:hover {
+        transition: 0.5s;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card2 {
+        color: white;
+        background-color: #f0a684;
+        padding: 2.3vw;
+        height: 22vw;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* max-width: 300px; */
+        margin: auto;
+        text-align: center;
+        font-family: 'Sintony', sans-serif;
+        /* margin-top: 20px;
+        margin-bottom: 5px; */
+        border-radius: 10px;
+        overflow:auto;
+
+    }
+
+    /* profile card */
+    .card2 img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 3vw;
+    }
+</style>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+    <div class="header">
+        <!-- <h1>atoms & bits</h1> -->
+        <!-- <h1>atoms & bits</h1> -->
+        <hr>
+        <h2>atoms & bits</h2>
+        <h3>SEPTEMBER 2019</h3>
+
+        <h3>location: GALVANIZE | San Francisco</h3>
+        <button onclick="window.location.href = ' https://karen143661.typeform.com/to/JcUhk2 ';" class="button">ATTENDEE
+            REGISTRATION</button>
+        <button onclick="window.location.href = ' https://karen143661.typeform.com/to/f3JnPa ';" class="button">MENTOR
+            REGISTRATION</button>
+
+    </div>
+    <div class="row">
+        <div class="col-2" style="color:#eb6734;margin-left:7vw;">
+            <h4 style="font-size:3vw;">WHAT IS ATOMS & BITS?</h4>
+
+        </div>
+        <div class="col-8" style="color:#f08359;margin-right:4vw;margin-top:1vw;">
+            <p style="font-size:2vw;"> Atoms & Bits is a Bay-Area hackathon where students from all over California
+                come to code and create a software-based startup in 24 hours. We provide free swag, meals, and
+                inspirational workshops for all attendees!
+            </p>
+
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+    <div class="row" style="background-color:#f08359;margin:2vw;">
+        <div class="col-1">
+        </div>
+        <div class="col-10" style="color:#f08359;margin:auto;">
+            <div class="row">
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <!-- <img src="plant.png"> -->
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHO CAN
+                            ATTEND? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                        ">Atoms & Bits is open to all high school students, but we welcome everyone to apply to become
+                            a mentor! </p>
+
+
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2" >
+                        <!-- <img src="plant.png"> -->
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHY SHOULD I ATTEND? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                            ">Atoms & Bits provides the perfect opportunity to grow as a coder while having a fun time with friends. It will be a unique experience to improve your maker 
+                            skills, meet new people, and receive free T-shirts, coding stickers, and other swag. Our hackathon also provides $$$ worth of prizes from sponsors. 
+                            </p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT SHOULD I BRING? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                                ">Since Atoms & Bits is an overnight event, make sure to bring a sleeping bag/blanket and toiletries in addition to your computer. We provide free perks, but you can also bring 
+                                any accessorioes that you might want while working such as headphones, chargers, hardware, etc. </p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> HOW MANY PEOPLE CAN BE IN A TEAM? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                                    ">Teams may range from 1 to 4 people. We also have a team bonding event to help you form a team.
+                       </p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> DO I HAVE TO KNOW HOW TO CODE? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                                        ">Definitely not! We have many workshops led by experts to help introduce you to the field 
+                                        of computer science. Even if you don't feel like coding, there are still so many things you can do! 
+                                    Don' worry; we have mentors and coding resources to help you get started! </p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <!-- <img src="plant.png"> -->
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT WILL OUR PROJECT BE JUDGED OFF OF? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                            ">ll projects will be judged with the same criteria: originality, polish, difficulty of implementation, 
+                            and viability as a product. We highly suggest that you treat your project like a product that you
+                             could potentially sell- rather than pitching just for the judges, pitch for everyone else,
+                              too! </p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <!-- <img src="plant.png"> -->
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT IS THE PURPOSE OF THIS HACKATHON?</p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                                ">Atoms & Bits focuses on the practicality of hackathon projects to bring innovation to life. 
+                                Think 'STARTUP' rather than just 'PROJECT' :)</p>
+
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- card -->
+                    <div class="card2">
+                        <!-- <img src="plant.png"> -->
+                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> DO I HAVE TO PAY FOR ANTYING? </p2>
+                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
+                                    ">Atoms & Bits is completely free! </p>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8" style="text-align:center;">
+            <h4 style="color:#eb6734;font-size:3vw;margin-bottom:3vw;">SCHEDULE</h4>
+            <table class="table">
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+
+                    <tr>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-2">
+
+        </div>
+
+
+    </div>
+    <div class="row" style="background-color:#f0a684;margin:2vw;text-align:center;border-radius:1vw;">
+        <h4 style="color:white;font-size:3vw;margin-bottom:3vw;">SPONSORS</h4>
+
+    </div>
+    <div class="row" style="text-align:center;margin-bottom:2vw;">
+        <h4 style="color:#eb6734;font-size:3vw;margin-bottom:3vw;">MEET THE TEAM</h4>
+        <div class="col-6" style=" border-right: 0.1rem solid#eb6734; height: 100%;  ">
+                <div class="card2" style="width:50%;height:100%;">
+                    <img src="karen.jpg">
+                    <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:2vw;padding-top:3vw;"> ANTON
+                        LIN </p2>
+                    <p style="font-size:1.3vw;font-family: 'Montserrat', sans-serif;">Co-Lead Director</p>
+                    <p style="font-size:1vw;font-family: 'Montserrat', sans-serif;"> | anton@atomsbits.org |</p>
+
+                </div>
+       
+
+        </div>
+        <div class="col-6">
+            <div class="card2" style="width:50%;height:100%;">
+                <img src="anton.png">
+                <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:2vw;padding-top:3vw;"> ANTON
+                    LIN </p2>
+                <p style="font-size:1.3vw;font-family: 'Montserrat', sans-serif;">Co-Lead Director</p>
+                <p style="font-size:1vw;font-family: 'Montserrat', sans-serif;">| karen@atomsbits.org |</p>
+
+            </div>
+        </div>
+    </div>
+    <div class = "row" style="text-align:center;
+            background-image: url('prism.svg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        padding: 3vw;
+    ">
+        <h4 style="color:white;font-size:3vw;margin-bottom:3vw;">QUESTIONS?</h4>
+        <hr>
+        <h4 style="color:white;font-size:2vw;margin-bottom:3vw;">CONTACT US   |  team@atomsbits.org  |</h4>
+
+    </div>
+
+
 </body>
 
 </html>
