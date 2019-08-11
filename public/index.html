@@ -1,553 +1,639 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8">
 
-    <title>Atoms & Bits</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-    <link rel="stylesheet" href="##">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145451013-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-145451013-1');
+    </script>
+
+
+    <title>Atoms & Bits Hackathon</title>
+    <link rel="stylesheet" media="all" href="/assets/application.css" data-turbolinks-track="true" />
+    <script src="/assets/application.js" data-turbolinks-track="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <link rel='stylesheet' href='/animate.css' type='text/css' />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-vlOMx0hKjUCl4WzuhIhSNZSm2yQCaf0mOU1hEDK/iztH3gU4v5NMmJln9273A6Jz" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@fullcalendar/core@4.2.0/main.js"></script>
+    <script src="https://unpkg.com/@fullcalendar/google-calendar@4.2.0/main.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Barlow|Montserrat:300,400&display=swap');
-
-    html {
-
-        overflow: scroll;
-    }
-
-    body {
-        font-family: 'Barlow', sans-serif;
-    }
-
-    .header h1 {
-        color: white;
-    }
-
-    .header {
-        background-image: url("../images/prism.svg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        height: auto;
-        padding: 3vw;
-        text-align: center;    }
-
-    .header hr {
-        border-color: white;
-        border-width: 1px;
-        margin-left: 2vw;
-        margin-right: 2vw;
-
-
-    }
-
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    [class*="col-"] {
-        float: left;
-        padding: 15px;
-    }
-
-    /** responsive columns*/
-
-    .col-1 {
-        width: 8.33%;
-    }
-
-    .col-2 {
-        width: 16.66%;
-    }
-
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.33%;
-    }
-
-    .col-5 {
-        width: 41.66%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-
-
-
-
-    /*fitting different screens*/
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-
-    @media only screen and (min-width: 600px) {
-
-        /* For tablets: */
-        .col-s-1 {
-            width: 8.33%;
-        }
-
-        .col-s-2 {
-            width: 16.66%;
-        }
-
-        .col-s-3 {
-            width: 25%;
-        }
-
-        .col-s-4 {
-            width: 33.33%;
-        }
-
-        .col-s-5 {
-            width: 41.66%;
-        }
-
-        .col-s-6 {
-            width: 50%;
-        }
-
-        .col-s-7 {
-            width: 58.33%;
-        }
-
-        .col-s-8 {
-            width: 66.66%;
-        }
-
-        .col-s-9 {
-            width: 75%;
-        }
-
-        .col-s-10 {
-            width: 83.33%;
-        }
-
-        .col-s-11 {
-            width: 91.66%;
-        }
-
-        .col-s-12 {
-            width: 100%;
-        }
-    }
-
-    @media only screen and (min-width: 768px) {
-        /* For desktop: */
-
-        .col-1 {
-            width: 8.33%;
-        }
-
-        .col-2 {
-            width: 16.66%;
-        }
-
-        .col-3 {
-            width: 25%;
-        }
-
-        .col-4 {
-            width: 33.33%;
-        }
-
-        .col-5 {
-            width: 41.66%;
-        }
-
-        .col-6 {
-            width: 50%;
-        }
-
-        .col-7 {
-            width: 58.33%;
-        }
-
-        .col-8 {
-            width: 66.66%;
-        }
-
-        .col-9 {
-            width: 75%;
-        }
-
-        .col-10 {
-            width: 83.33%;
-        }
-
-        .col-11 {
-            width: 91.66%;
-        }
-
-        .col-12 {
-            width: 100%;
-        }
-    }
-
-    /*end*/
-    .header .button {
-        font-family: 'Montserrat', sans-serif;
-
-        background: transparent;
-        border: 0.15vw solid #eb6734;
-        border-radius: 3vw;
-        color: #eb6734;
-        font-size: 1.5vw;
-        padding: 1vw;
-        margin: 2vw;
-
-
-    }
-
-    .header .button:hover {
-        background-color: #eb6734;
-        /* Green */
-        color: white;
-    }
-
-    .header h2 {
-        color: white;
-        font-size: 6vw;
-
-    }
-
-    .header h3 {
-        color: white;
-        font-size: 2vw;
-
-    }
-
-    .row {
-        padding: 1vw;
-    }
-
-    .card2:hover {
-        transition: 0.5s;
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .card2 {
-        color: white;
-        background-color: #f0a684;
-        padding: 2.3vw;
-        height: 22vw;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        /* max-width: 300px; */
-        margin: auto;
-        text-align: center;
-        font-family: 'Sintony', sans-serif;
-        /* margin-top: 20px;
-        margin-bottom: 5px; */
-        border-radius: 10px;
-        overflow:auto;
-
-    }
-
-    /* profile card */
-    .card2 img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 3vw;
-    }
-</style>
 
 <body>
-    <div class="header">
-        <!-- <h1>atoms & bits</h1> -->
-        <!-- <h1>atoms & bits</h1> -->
-        <hr>
-        <h2>atoms & bits</h2>
-        <h3>OCTOBER 5-6 2019</h3>
+    <div class="modal fade border-0" id="errModal" tabindex="-1" role="dialog" aria-labelledby="errModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog border-0" role="document">
+            <div class="modal-content border-0 rounded-0">
+                <div class="modal-header border-0">
+                    <small class="modal-title font-weight-bold" id="flashModalLabel">Error</small>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body font-weight-medium border-0">
+                    <span class="errMsg"></span>
+                </div>
+                <div class="modal-footer border-dark">
+                    <span class="mr-auto">
+                        <small class="font-weight-bold">PopReport</small>
+                    </span>
+                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-cover">
+        <div class="loading2"></div>
+    </div>
+    <div id="main">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark pl-md-10 pr-md-10 pt-md-3">
+            <a class="navbar-brand" href="/">
+                <!-- <img src="/images/prism.svg" height="50" class="d-inline-block align-top" alt=""> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#features">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#pricing">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/apply">Apply</a>
+                    </li>
 
-        <h3>location: MAKE SCHOOL | 555 Post St, San Francisco, CA 94102</h3>
-        <button onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSe5i1Q4RBlnA4aUssX-qIW44asIrHvVSnEIFqfzbjNLw0awJg/viewform';" class="button">ATTENDEE
-            REGISTRATION</button>
-        <button onclick="window.location.href = ' https://karen143661.typeform.com/to/f3JnPa ';" class="button">MENTOR
-            REGISTRATION</button>
+                </ul>
+            </div>
+        </nav>
+        <br />
+        <br>
+        <br>
+        <div class="modal fade border-0" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog border-0 modal-lg" role="document">
+                <div class="modal-content border-0 rounded-0">
+                    <div class="modal-header border-0">
+                        <small class="modal-title font-weight-bold" id="termsModalLabel">Terms of service</small>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body font-weight-medium  border-0">
+                        <p style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;">
+                            <strong><span
+                                    style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; ">
+                                    Event Code of Conduct</span></strong></p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+                                All attendees, speakers, sponsors and volunteers at events hosted by Atoms &amp; Bits, or
+                                events representing Atoms &amp; Bits, are required to agree with the following code of
+                                conduct. Organizers and/or Atoms &amp; Bits staff will enforce this code throughout the
+                                event. We are expecting cooperation from all participants to help ensure a safe
+                                environment for everybody.</span></p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><strong><span
+                                    style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline;">Overview</span></strong>
+                        </p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+                                Atoms &amp; Bits is dedicated to providing a harassment-free event experience for everyone,
+                                regardless of gender, gender identity and expression, age, sexual orientation,
+                                disability, physical appearance, body size, race, ethnicity, religion (or lack thereof),
+                                or technology choices. We do not tolerate harassment of event participants in any form.
+                                Sexual language and imagery is not appropriate for any event venue, including talks,
+                                workshops, parties, Twitter and other online media. Event participants violating these
+                                rules may be sanctioned or expelled from the event without a refund at the discretion of
+                                the event organizers or Atoms &amp; Bits employees.</span></p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><strong><span
+                                    style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; ">Details</span></strong>
+                        </p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">Harassment
+                                includes offensive verbal comments related to gender, gender identity and expression,
+                                age, sexual orientation, disability, physical appearance, body size, race, ethnicity,
+                                religion, technology choices, sexual images in public spaces, deliberate intimidation,
+                                stalking, following, harassing photography or recording, sustained disruption of talks
+                                or other events, inappropriate physical contact, and unwelcome sexual attention.</span>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">Participants
+                                asked to stop any harassing behavior are expected to comply immediately.</span></p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">Sponsors
+                                are also subject to the anti-harassment policy. In particular, sponsors should not use
+                                sexualized images, activities, or other material. Sponsor staff (including volunteers)
+                                should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualized
+                                environment.</span></p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">If
+                                a participant engages in harassing behavior, the event organizers or Atoms &amp; Bits
+                                staff may take any action they deem appropriate, including warning the offender or
+                                expulsion from the event with no refund.</span></p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">If
+                                you are being harassed, notice that someone else is being harassed, or have any other
+                                concerns, please contact a member of Atoms &amp; Bits or event staff immediately.</span>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span
+                                style="font-size: 11pt; font-family: 'Titillium Web',sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; ">Atoms
+                                &amp; Bits staff will be happy to help participants contact venue security or local law
+                                enforcement, provide escorts, or otherwise assist those experiencing harassment to feel
+                                safe for the duration of the event. We value your attendance. We expect participants to
+                                follow these rules at all Atoms &amp; Bits related event venues.</span></p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="modal-footer border-dark">
+                        <span class="mr-auto">
+                            <small class="font-weight-bold">Last updated 26 November 2018</small>
+                        </span>
+                        <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="home" class="container-fluid">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row frontRow">
+                <div class="col-md-1"></div>
+                <div class="col-md-8 my-auto">
+                    <h1 class="display-1 text-light text-md-left text-center font-weight-bold">
+                        Atoms & Bits
+                        <br>
+                    </h1>
+                    <h3 class="text-light font-weight-light mt-5 mt-md-0 text-center text-md-left">
+                        <span class="font-weight-bold">MAKE SCHOOL</span> 555 Post St, San Francisco, CA 94102<br>
+                        OCTOBER 5-6 2019
+                    </h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3 pr-md-1 mb-3">
+                            <a href="/apply"
+                                class="btn text-light btn-block btn-sm pl-3 pr-3 pt-2 pb-2 text-dark bg-branded-warning font-weight-bold badge-pill">
+                                Apply Now
+                            </a>
+                        </div>
+                        <div class="col-md-3  mb-3">
+                            <a href="#about"
+                                class="btn text-light btn-block btn-sm pl-3 pr-3 pt-2 pb-2 bg-branded-danger font-weight-bold badge-pill">
+                                Learn More
+                            </a>
+                        </div>
+                        <div class="col-md-3 pl-md-1 mb-3">
+                            <a href="#sponsors"
+                                class="btn text-light btn-block btn-sm pl-3 pr-3 pt-2 pb-2 bg-branded-info font-weight-bold badge-pill">
+                                I'm a Sponsor
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-1 col-3"></div>
+                <div class="col-md-3 col-6 mt-5 mt-md-0">
+                    <!-- <img src="/img/funko.png" class="img-fluid"> -->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div id="about" class="container-fluid bg-light">
+            <br>
+            <br>
+            <h3 class="text-center font-weight-bold">
+                About
+            </h3>
+            <br>
+            <br>
+            <div class="row mt-md-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 my-auto">
+                    <h5 class="font-weight-normal"
+                        style="  text-align: center;   padding-left: 10% ; padding-right: 10%   ">
+                        Atoms & Bits is a Bay-Area hackathon where students from all over California come to code and
+                        create a software-based startup in 24 hours. We provide free swag, meals, and inspirational
+                        workshops for all attendees! <br>
+                        <br>
+                        We want to create a supportive and safe environment for all students.
+                        <br>
+                        <br>
+                        Please view our <a href="#termsModal" data-toggle="modal" data-target="#termsModal">Code of
+                            Conduct</a>
+                    </h5>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5" style="  margin: auto;
+                        width: 50%;
+                        padding: 10px;">
+                            <a href="#features"
+                                class="text-light font-weight-bold btn btn-block badge-pill btn-sm pl-3 pr-3 pt-2 pb-2 bg-branded-danger">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <br>
 
+                    <br>
+
+                </div>
+                <div class="col-md-3"></div>
+                <!-- <div class="col-md-4 p-5 p-md-0">
+                  <div class="carousel-flick bg-0 rounded opacity-0" id="image-carousel">
+                  
+                  <img class="carousel-img rounded" src="/images/hack.jpg" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/FKYSMK5.png" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/fOhdF32.png" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/hFW6DtH.png" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/Ph5YZ7d.png" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/rNik7Vp.png" />
+                  <img class="carousel-img rounded" src="https://i.imgur.com/Nm0Ox1g.png" /> -->
+            </div>
+            <script>
+                $("#image-carousel").flickity({
+                    wrapAround: true,
+                    prevNextButtons: false,
+                    fullscreen: true,
+                    pageDots: false,
+                    percentPosition: false,
+                    autoPlay: 2000,
+                    pauseAutoPlayOnHover: false,
+                    freeScroll: true,
+                    cellSelector: '.carousel-img',
+                    on: {
+                        ready: function () {
+                            $("#image-carousel").css('opacity', 1);
+                        }
+                    }
+                });
+
+                setTimeout(function () {
+                    $("#image-carousel").flickity("resize");
+                }, 1000);
+            </script>
+        </div>
+    </div>
+    <!-- <br>
+         <br> -->
+    </div>
+    <div id="features" class="container-fluid bg-branded-light">
+        <br>
+        <br>
+        <h3 class="text-center font-weight-bold">
+            FAQ
+        </h3>
+        <h5 class="text-center font-weight-light">
+            Atoms & Bits is an all-inclusive hackathon!
+        </h5>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card-deck mb-md-4">
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-users"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                                Who can attend?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Atoms & Bits is open to all high school students, but we welcome everyone to apply to
+                                become a mentor!
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-question"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                                Why should I attend?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Atoms & Bits provides the perfect opportunity to grow as a coder while having a fun time
+                                with friends. It will be a unique experience to improve your maker skills, meet new
+                                people, and receive free T-shirts, coding stickers, and other swag. Our hackathon also
+                                provides $$$ worth of prizes from sponsors.
+                            </h6>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                        </div>
+                    </div>
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-briefcase"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                                What Should I Bring?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Since Atoms & Bits is an overnight event, make sure to bring a sleeping bag/blanket and
+                                toiletries in addition to your computer. We provide free perks, but you can also bring
+                                any accessorioes that you might want while working such as headphones, chargers,
+                                hardware, etc.
+                            </h6>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck">
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-people-carry"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                               How do Teams Work?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Teams may range from 1 to 4 people. We also have a team bonding event to help you form a
+                                team.
+                            </h6>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                        </div>
+                    </div>
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-code"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                                Do I Need Coding Experience?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Definitely not! We have many workshops led by experts to help introduce you to the field
+                                of computer science. Even if you don't feel like coding, there are still so many things
+                                you can do! Don' worry; we have mentors and coding resources to help you get started!
+                            </h6>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                        </div>
+                    </div>
+                    <div class="card border-left-0 border-top-0 border-right-0 border-orange border-bottom-thick">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-center">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </h3>
+                            <br>
+                            <h6 class="font-weight-bold text-center">
+                                How Much Does it Cost?
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-center font-weight-normal">
+                                Atoms & Bits is completely free!
+                            </h6>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Br>
+        <br>
+        <Br>
+    </div>
+    <div id="pricing" class="container-fluid bg-light">
+        <br>
+        <br>
+        <h3 class="text-center font-weight-bold display-4">
+            Schedule
+        </h3>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h5 class="text-center font-weight-light">
+                </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-8" style="text-align:center;">
+                <table class="table">
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oct 5</td>
+                            <td>11:00 AM-12PM</td>
+                            <td>Check-In</td>
+                        </tr>
+                        <tr>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        <tr>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <!-- <br>
+        <br>
+        <br>
+        <br> -->
+    </div>
+    <!-- <br>
+    <br> -->
+    <div id="sponsors" class="container-fluid bg-light">
+        <br>
+        <br>
+        <h3 class="text-center font-weight-bold display-4">
+            Sponsors
+        </h3>
+        <h5 class="text-center font-weight-light">
+            Interested in sponsoring? View our sponsorship plans here.
+        </h5>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <!-- <h5 class="text-center font-weight-light">
+                    </h5> -->
+                <img class="logo-image" src='/images/logos.png'>
+            </div>
+            <div class="col-md-3"></div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- <br> -->
+    <!-- <br> -->
+
+    <div id="team" class="container-fluid bg-light">
+        <br>
+        <br>
+        <h3 class="text-center font-weight-bold display-4">
+            Team
+        </h3>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <div class="text-center">
+                    <img src="images/anton.png" class="team-img">
+                    <h4 class="team-name">Anton Lin</h4>
+                    <p>Director</p>
+                    <div class="social-media">
+                        <a class="text-dark social-icon" target="_blank" href="https://github.com/antonjlin">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="text-dark social-icon" target="_blank" href="mailto:anton@atomsbits.org">
+                            <i class="fas fa-envelope-open"></i> </a>
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <img src="images/karen.jpg" class="team-img">
+                    <h4 class="team-name">Karen Li</h4>
+                    <p>Director</p>
+                    <div class="social-media">
+                        <a class="text-dark social-icon" target="_blank" href="https://github.com/karenli6">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="text-dark social-icon" target="_blank" href="mailto:karen@atomsbits.org">
+                            <i class="fas fa-envelope-open"></i> </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md"></div>
+
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
     <div class="row">
-        <div class="col-2" style="color:#eb6734;margin-left:7vw;">
-            <h4 style="font-size:3vw;">WHAT IS ATOMS & BITS?</h4>
-
-        </div>
-        <div class="col-8" style="color:#f08359;margin-right:4vw;margin-top:1vw;">
-            <p style="font-size:2vw;"> Atoms & Bits is a Bay-Area hackathon where students from all over California
-                come to code and create a software-based startup in 24 hours. We provide free swag, meals, and
-                inspirational workshops for all attendees!
-            </p>
-            <hr>
-            <p style="font-size:1.5vw;"> We want to create a supportive and safe environment for all students. 
-               
-            </p>
-            <p style = "font-size:1.5vw"> Please view our <a href = "https://docs.google.com/document/d/1fpIsObMsvoqE5Vz8wijDJUv7iQdTMN9jzQP7VI0QUdA/edit?usp=sharing">Code of Conduct</a>.</p>
-            
-
-
-
-        </div>
-        <div class="col-2">
-
-        </div>
-    </div>
-    <div class="row" style="background-color:#f08359;margin:2vw;">
-        <div class="col-1">
-        </div>
-        <div class="col-10" style="color:#f08359;margin:auto;">
+        <div class="col-md-2 col-1"></div>
+        <div class="col-md-8 col-10">
+            <hr class="border-light">
             <div class="row">
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <!-- <img src="plant.png"> -->
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHO CAN
-                            ATTEND? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                        ">Atoms & Bits is open to all high school students, but we welcome everyone to apply to become
-                            a mentor! </p>
-
-
-                    </div>
+                <div class="col-md-5">
+                    <h3 class="text-light font-weight-bold">
+                        <!-- <img src="/img/logo.png" height="50"> -->
+                        Atoms & Bits
+                    </h3>
+                    <small class="text-light">
+                        © 2019 Atoms & Bits
+                    </small>
                 </div>
-
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2" >
-                        <!-- <img src="plant.png"> -->
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHY SHOULD I ATTEND? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                            ">Atoms & Bits provides the perfect opportunity to grow as a coder while having a fun time with friends. It will be a unique experience to improve your maker 
-                            skills, meet new people, and receive free T-shirts, coding stickers, and other swag. Our hackathon also provides $$$ worth of prizes from sponsors. 
-                            </p>
-
-
-                    </div>
+                <div class="col-md-2">
                 </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT SHOULD I BRING? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                                ">Since Atoms & Bits is an overnight event, make sure to bring a sleeping bag/blanket and toiletries in addition to your computer. We provide free perks, but you can also bring 
-                                any accessorioes that you might want while working such as headphones, chargers, hardware, etc. </p>
-
-
-                    </div>
+                <div class="col-md-5 mt-3 mt-md-0">
+                    <h6 class="text-md-right mt-2 text-light">
+                        hello@atomsbits.org
+                        <br>
+                        <br>
+                        <a class="text-light" target="_blank" href="https://instagram.com/thepopreport">
+                            <i class="fab fa-instagram"></i> atoms&bits
+                        </a>
+                        <br>
+                        <br>
+                        <a class="text-light" target="_blank" href="https://twitter.com/thepopreport">
+                            <i class="fab fa-twitter"></i> atoms&bits
+                        </a>
+                    </h6>
                 </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> HOW MANY PEOPLE CAN BE IN A TEAM? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                                    ">Teams may range from 1 to 4 people. We also have a team bonding event to help you form a team.
-                       </p>
-
-
-                    </div>
-                </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> DO I HAVE TO KNOW HOW TO CODE? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                                        ">Definitely not! We have many workshops led by experts to help introduce you to the field 
-                                        of computer science. Even if you don't feel like coding, there are still so many things you can do! 
-                                    Don' worry; we have mentors and coding resources to help you get started! </p>
-
-
-                    </div>
-                </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <!-- <img src="plant.png"> -->
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT WILL OUR PROJECT BE JUDGED OFF OF? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                            ">ll projects will be judged with the same criteria: originality, polish, difficulty of implementation, 
-                            and viability as a product. We highly suggest that you treat your project like a product that you
-                             could potentially sell- rather than pitching just for the judges, pitch for everyone else,
-                              too! </p>
-
-
-                    </div>
-                </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <!-- <img src="plant.png"> -->
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> WHAT IS THE PURPOSE OF THIS HACKATHON?</p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                                ">Atoms & Bits focuses on the practicality of hackathon projects to bring innovation to life. 
-                                Think 'STARTUP' rather than just 'PROJECT' :)</p>
-
-
-                    </div>
-                </div>
-                <div class="col-3">
-                    <!-- card -->
-                    <div class="card2">
-                        <!-- <img src="plant.png"> -->
-                        <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:1.5vw;"> DO I HAVE TO PAY FOR ANTYING? </p2>
-                        <p style="font-size:1vw;        font-family: 'Montserrat', sans-serif;
-                                    ">Atoms & Bits is completely free! </p>
-
-
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-        <div class="col-1">
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2">
-
-        </div>
-        <div class="col-8" style="text-align:center;">
-            <h4 style="color:#eb6734;font-size:3vw;margin-bottom:3vw;">SCHEDULE</h4>
-            <table class="table">
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-
-                    <tr>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-
-
-
-                </tbody>
-
-            </table>
-        </div>
-        <div class="col-2">
-
-        </div>
-
-
-    </div>
-    <div class="row" style="background-color:#f0a684;margin:2vw;text-align:center;border-radius:1vw;">
-        <h4 style="color:white;font-size:3vw;">SPONSORS</h4>
-        <img src = "../images/logos.png" style = "transform: scale(0.8);margin-bottom:3vw;"> 
-
-
-    </div>
-    <div class="row" style="text-align:center;margin-bottom:2vw;">
-        <h4 style="color:#eb6734;font-size:3vw;margin-bottom:3vw;">MEET THE TEAM</h4>
-        <div class="col-6" style=" border-right: 0.1rem solid#eb6734; height: 100%;  ">
-                <div class="card2" style="width:50%;height:100%;">
-                    <img src="../images/anton.png">
-                    <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:2vw;padding-top:3vw;"> ANTON
-                        LIN </p2>
-                    <p style="font-size:1.3vw;font-family: 'Montserrat', sans-serif;">Co-Lead Director</p>
-                    <p style="font-size:1vw;font-family: 'Montserrat', sans-serif;"> | anton@atomsbits.org |</p>
-
-                </div>
-       
-
-        </div>
-        <div class="col-6">
-            <div class="card2" style="width:50%;height:100%;">
-                <img src="../images/karen.jpg">
-                <p2 style="font-family: 'Montserrat', sans-serif;font-weight:1000;font-size:2vw;padding-top:3vw;"> KAREN LI </p2>
-                <p style="font-size:1.3vw;font-family: 'Montserrat', sans-serif;">Co-Lead Director</p>
-                <p style="font-size:1vw;font-family: 'Montserrat', sans-serif;">| karen@atomsbits.org |</p>
-
             </div>
         </div>
     </div>
-    <div class = "row" style="text-align:center;
-            background-image: url('../images/prism.svg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        height: auto;
-        padding: 3vw;
-    ">
-        <h4 style="color:white;font-size:3vw;margin-bottom:3vw;">QUESTIONS?</h4>
-        <hr>
-        <h4 style="color:white;font-size:2vw;margin-bottom:3vw;">CONTACT US   |  team@atomsbits.org  |</h4>
-
+    <br>
+    <br>
     </div>
-
-
 </body>
 
 </html>
