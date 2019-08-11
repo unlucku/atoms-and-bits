@@ -195,6 +195,11 @@ only screen and (min-resolution: 2dppx) {
 	background-color: #2e54e7 !important
 }
 
+.bg-branded-info {
+	background-color: #3c8cd6 !important
+}
+
+
 .bg-branded-warning {
 	background-color: #ffffff !important
 }
